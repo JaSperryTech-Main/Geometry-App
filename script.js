@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement);
 // Create a dodecahedron
 const geometry = new THREE.DodecahedronGeometry(10);
 const material = new THREE.MeshStandardMaterial({
-  color: 0x2194ce,
+  color: 0xB00B69,
   roughness: 0,
   metalness: 0,
 });

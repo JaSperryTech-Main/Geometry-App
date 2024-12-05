@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Controlled Dodecahedron</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div id="settings">
+        <h1>3D Object Settings</h1>
+
+        <h2>Appearance</h2>
+        <label for="color">
+          <span class="tooltip"
+            >Dodecahedron Color:
+            <span>Change the color of the 3D object.</span>
+          </span>
+        </label>
+        <input type="color" id="color" value="#2194ce" />
+
+        <label for="size">
+          <span class="tooltip"
+            >Dodecahedron Size:
+            <span>Adjust the size of the 3D object.</span>
+          </span>
+        </label>
+        <input type="range" id="size" min="1" max="20" step="1" value="10" />
+
+        <h2>Animation</h2>
+        <label for="rotationSpeed">
+          <span class="tooltip"
+            >Rotation Speed:
+            <span>Set how fast the object rotates.</span>
+          </span>
+        </label>
+        <input
+          type="range"
+          id="rotationSpeed"
+          min="0"
+          max="0.1"
+          step="0.01"
+          value="0"
+        />
+
+        <label for="gridToggle">
+          <input type="checkbox" id="gridToggle" checked />
+          Show Grid
+        </label>
+
+        <h2>Camera Presets</h2>
+        <button id="frontView">Front View</button>
+        <button id="topView">Top View</button>
+        <button id="sideView">Side View</button>
+
+        <h2>Performance</h2>
+        <button id="toggleStats">Toggle Performance Stats</button>
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r17/Stats.min.js"
+    ></script>
+
+    <!-- Include Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Include OrbitControls -->
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

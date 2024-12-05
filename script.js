@@ -14,8 +14,8 @@ document.body.appendChild(renderer.domElement);
 const geometry = new THREE.DodecahedronGeometry(10);
 const material = new THREE.MeshStandardMaterial({
   color: 0x2194ce,
-  roughness: 0.5,
-  metalness: 0.5,
+  roughness: 0,
+  metalness: 0,
 });
 const dodecahedron = new THREE.Mesh(geometry, material);
 dodecahedron.castShadow = true;
@@ -52,7 +52,7 @@ document.body.appendChild(stats.dom);
 
 
 let rotationSpeed = 0;
-let showStats = true;
+let showStats = false;
 
 // Resize event
 window.addEventListener("resize", () => {
